@@ -3,7 +3,7 @@ initial_list= input().split("!")
 while True:
     command = input()
     
-    if command = "Go Shopping":
+    if command == "Go Shopping":
         break
     command_parts = command.split()
     action = command_parts[0]
