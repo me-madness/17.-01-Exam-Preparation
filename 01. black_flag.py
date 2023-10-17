@@ -3,7 +3,6 @@
 days = int(input())
 daily_plunder = int(input())
 expected_plunder = float(input())
-
 total_plunder = 0
 
 for day in range(1, days + 1):
