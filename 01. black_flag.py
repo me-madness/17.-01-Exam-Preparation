@@ -1,3 +1,5 @@
+# First task from the Lector
+
 days = int(input())
 daily_plunder = int(input())
 expected_plunder = float(input())
@@ -17,5 +19,9 @@ for day in range(1, days + 1):
 if total_plunder >= expected_plunder:       
     print(f"Ahoy! {total_plunder:.2f} plunder gained")
 else:
-    percentage = (total_plunder)
-    print(f"Collected only {}% of the plunder")
+    percentage = (total_plunder / expected_plunder) * 100
+    print(f"Collected only {percentage:.2f}% of the plunder")
+    
+# Second task from me
+
+    
