@@ -13,8 +13,10 @@ def main():
         
         
         if is_invalid_input(index1, index2, sequence_of_elements):
-            pass
-        
+            handle_invalid_input(sequence_of_elements, count_moves)
+        else:
+            handle_valid_input(index1, index2, sequence, count_moves)
+            
         
         
 def is_invalid_input(index1, index2, sequence):
@@ -24,4 +26,20 @@ def is_invalid_input(index1, index2, sequence):
           or index2 < 0
           or index1 >= len(sequence)
           or index2 >= len(sequence)
-      )         
+      ) 
+      
+      
+def handle_invalid_input(sequence, count_moves): 
+    mid_index = len(sequence) // 2
+    sequence.insert(mid_index, f"-{count_moves}a")             
+    sequence.insert(mid_index, f"-{count_moves}a") 
+    print("Invalid input! Adding additional element to the board") 
+    
+def handle_valid_input(index1, index2, sequence, count_moves):
+    if sequence[index1] == sequence[index2]:
+        print(f"Congrats! You have found matching elements - ${sequence[index1]}!")
+        second_el = sequence[index2]
+        sequence.pop(index1)
+        sequence.remove(second_el)
+    else:
+            
