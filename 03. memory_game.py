@@ -8,6 +8,7 @@ def main():
         
         if command == "end":
             print(f"Sorry you lose :(\n{' '.join(sequence_of_elements)})")
+            break
             
         index1, index2 = map(int, command.split())
         
@@ -15,7 +16,7 @@ def main():
         if is_invalid_input(index1, index2, sequence_of_elements):
             handle_invalid_input(sequence_of_elements, count_moves)
         else:
-            handle_valid_input(index1, index2, sequence, count_moves)
+            handle_valid_input(index1, index2, sequence_of_elements, count_moves)
             
         
         
@@ -37,9 +38,16 @@ def handle_invalid_input(sequence, count_moves):
     
 def handle_valid_input(index1, index2, sequence, count_moves):
     if sequence[index1] == sequence[index2]:
-        print(f"Congrats! You have found matching elements - ${sequence[index1]}!")
+        print(f"Congrats! You have found matching elements - {sequence[index1]}!")
         second_el = sequence[index2]
         sequence.pop(index1)
         sequence.remove(second_el)
     else:
-            
+        print("Try again!") 
+        
+        
+    if len(sequence) == 0:
+        print(f"You have won in {count_moves} turns!")
+        exit()
+        
+main()              
