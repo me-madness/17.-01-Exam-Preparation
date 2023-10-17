@@ -1,9 +1,11 @@
+# First task from the Lector
+
 def main():
     sequence_of_elements = input().split()
     count_moves = 0
     
     while True:
-        count_moves+= 1
+        count_moves += 1
         command = input()
         
         if command == "end":
@@ -27,8 +29,7 @@ def is_invalid_input(index1, index2, sequence):
           or index2 < 0
           or index1 >= len(sequence)
           or index2 >= len(sequence)
-      ) 
-      
+      )      
       
 def handle_invalid_input(sequence, count_moves): 
     mid_index = len(sequence) // 2
@@ -50,4 +51,8 @@ def handle_valid_input(index1, index2, sequence, count_moves):
         print(f"You have won in {count_moves} turns!")
         exit()
         
-main()              
+main() 
+
+# Second task from me
+
+             
