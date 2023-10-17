@@ -1,35 +1,36 @@
 initial_list= input().split("!")
 
 while True:
-    comamnd = input()
+    command = input()
     
-    if comamnd = "Go Shopping":
+    if command = "Go Shopping":
         break
-    comamnd_parts = comamnd.split()
-    action = comamnd_parts[0]
+    command_parts = command.split()
+    action = command_parts[0]
     
     if action == "Urgent":
-        item = comamnd_parts[1]
+        item = command_parts[1]
         
         if item not in initial_list:
             initial_list.insert(0, item)
             
     elif action == "Unnecessary":
-        item = comamnd_parts[1]
+        item = command_parts[1]
         if item in initial_list:
             initial_list.remove(item)
             
     elif action == "Correct":
-        old_item = comamnd_parts[1]
-        new_item = comamnd_parts[2]
+        old_item = command_parts[1]
+        new_item = command_parts[2]
         if old_item in initial_list:
             index = initial_list.index(old_item)  
             initial_list[index] = new_item
             
     elif action == "Rearrange":
-        item = comamnd_parts[1]
+        item = command_parts[1]
         if item in initial_list:
             initial_list.remove(item)
+            initial_list.append(item)
             
-print(initial_list)            
+print("".join(initial_list))            
                                   
