@@ -19,9 +19,7 @@ def main():
             handle_invalid_input(sequence_of_elements, count_moves)
         else:
             handle_valid_input(index1, index2, sequence_of_elements, count_moves)
-            
-        
-        
+                           
 def is_invalid_input(index1, index2, sequence):
       return(
           index1 == index2
