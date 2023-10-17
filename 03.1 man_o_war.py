@@ -3,7 +3,7 @@ def fire_func(warship, index, damage):
         warship[index] -= damage
         
         if warship <= 0:
-            print("You won! The enemy ")
+            print("You won! The enemy ship has sunken.")
             
             
 def defend_func(pirate_ship, startIndex, endIndex, damage):
