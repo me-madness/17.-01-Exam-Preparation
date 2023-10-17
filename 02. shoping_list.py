@@ -1,3 +1,5 @@
+# First task from the Lector
+
 initial_list= input().split("!")
 
 while True:
@@ -31,6 +33,9 @@ while True:
         if item in initial_list:
             initial_list.remove(item)
             initial_list.append(item)
+ 
             
 print("".join(initial_list))            
+ 
+# Second task by me 
                                   
